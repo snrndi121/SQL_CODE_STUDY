@@ -1,8 +1,9 @@
 # 주제
   - ROLLUP 인수 순서에 따른 차이(내부/외부)
-
-#1. ROLLUP 인수 순서에 따른 차이
-#1.1 내부 순서
+  (이 때, SELECT절 내 컬럼 순서는 A, B 고정 )
+  
+## 1.ROLLUP 인수 순서에 따른 차이
+### 1.1 내부 순서
   - ROLLUP(A), b
 ```
 select
@@ -49,7 +50,7 @@ where rownum <= 20
 group by e.job_id, ROLLUP(d.department_name);
 ```
 
-#1.2 외부 순서
+### 1.2 외부 순서
   - ROLLUP(A, B)
 ```
 select
