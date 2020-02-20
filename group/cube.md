@@ -1,5 +1,5 @@
 # 주제
-  - cube와 같은 표현(rollup, GROUP BY)
+  - CUBE와 같은 표현(ROLLUP, GROUP BY)
 
 # 1.cube와 같은 표현
   - GROUP BY
@@ -19,7 +19,7 @@ UNION ALL
 SELECT 'All departments', 'All jobs', count(*), sum(salary)
 FROM employees e JOIN departments d ON e.department_id = d.department_id;
 ```
-  - rollup 활용
+  - ROLLUP 활용
 ```
 SELECT
 CASE grouping(d.department_name) WHEN 1 THEN 'All departments' ELSE d.department_name END department_name,
