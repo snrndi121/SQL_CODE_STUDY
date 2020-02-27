@@ -20,11 +20,11 @@ select count(*) from tb_dept;
 
 ### 1.1 서브쿼리에 PK/FK 또는 Unique 인덱스 없는 경우
 ```
--- case 1, 4 : 메인/서브 쿼리의 조인 컬럼에 대한 인덱스가 모두 없는 경우
+-- case 1, 5 : 메인/서브 쿼리의 조인 컬럼에 대한 인덱스가 모두 없는 경우
 -- drop index tb_emp_idx;
 -- drop index tb_dept_idx;
 
--- case 2, 5 : 메인 쿼리의 조인 컬럼에 대한 인덱스만 있는 경우
+-- case 2, 6 : 메인 쿼리의 조인 컬럼에 대한 인덱스만 있는 경우
 -- create index tb_emp_idx on tb_emp(department_id);
 -- drop index tb_dept_idx;
 
